@@ -4,7 +4,7 @@ body{
 	max-width: 930px;
 	margin: 0 auto;
 	background-color: #94bfa5 ;
-	background: url("img_index/ambiente-6.jpg");
+	background-image: image('img_all/img_index/Ambiente.png');
 }
 
 
