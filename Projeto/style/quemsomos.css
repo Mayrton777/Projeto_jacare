@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+body{
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #94bfa5 ;
+	text-align: center;
+	background: url("img-quessmos/ambiente-6.jpg");
+}
+.cabeca img{
+	width: 110px;
+	float: left;
+	text-align:right;
+	max-width: 100%;
+	height: auto;
+}
+figcaption{
+	color: #801214;
+	font-size: 300%;
+}
+.cabeca ul{
+	margin-top: 25px;
+	margin-right: 25px;
+	float: right;
+	text-align: right;
+}
+.cabeca li{
+	font-size: 22px;
+	width: 100px;	
+	display:inline;
+	border-radius: 4px;
+}
+.cabeca a{
+	float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+	text-decoration: none;	
+}
+.cabeca a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.cabeca .icon {
+  display: none;
+}  
+#esconderlista{
+	display: none;
+	width: 60px;
+	height: auto;
+}
+.principal1{
+	text-align: center;
+	margin-top: 5px;
+	padding-top: 5px;
+	max-width: 98%;
+	height:auto;
+	}
+.rodape img{
+	width: 45px;
+	height: auto;
+}
+.rodape .lgimg{
+	border-radius: 12px;
+	width:40px;
+}
+
+.rodape li{
+	display: inline;
+}
+
+
+
+
