@@ -17,7 +17,7 @@ header{
 }
 .cabeca{
 	padding: 5px;
-	height: auto ;
+	height: auto;
 } 
 .cabeca img{
 	width: 110px;
@@ -66,11 +66,7 @@ header{
 	height: auto;
 }
 main{
-	border-radius:8px;
-	background-color:white;
-	max-width: 100%;
-	height:auto;
-	padding-bottom: 15px;
+	background-image: url("todas_imagens_d_projeto/img_reserva");
 }
 
 .principal1{
@@ -87,11 +83,7 @@ main{
 	
 }
 .principal2 img{
-	padding: 5px;
-	margin: 5px;
-	max-width: 98%;
-	border-radius: 15px;
-	height:auto;
+	background-image: url("todas_imagens_d_projeto/img_reserva");
 }
 
 
@@ -138,9 +130,6 @@ footer{
 	padding:15px;
 }
 
-.textquemsomos{
-		
-}
 .textquemsomos p{
 
 	font-size: 15.3px;
@@ -181,7 +170,6 @@ form {
     width: 450px;
     /* Para ver as bordas do formulário */
     padding: 5em;
-   // border: 1px solid #CCC;
     border-radius: 1em;
 }
 form div + div {
