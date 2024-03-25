@@ -1,49 +1,74 @@
-@charset "UTF-8";
-
+/*Corpo da página*/
 body{
-	max-width: 960px;
+	max-width: 930px;
 	margin: 0 auto;
 	background-color: #94bfa5 ;
-	text-align: center;
-	background: url("img-quessmos/ambiente-6.jpg");
 }
-.cabeca img{
-	width: 110px;
-	float: left;
-	text-align:right;
+
+/*Inicío do cabeçalho*/
+.cabecalho {
+	border-radius:8px;
+	background-color:white;
 	max-width: 100%;
+	height:auto;
+	padding: 1.5%;
+	margin: 1.5%;
+	display: flex;
+}
+
+.cabecalho_logo{
+	padding: 1%;
+	width: 15%;
 	height: auto;
 }
-figcaption{
+
+.cabecalho_logo_img{
+	width: 110%;
+	height: auto;
+}
+
+.cabecalho_links{
+	display: inline;
+	text-align: center;
+	justify-content: center;
+	padding: 1%;
+	width: 70%;
+	height: 10%;
+}
+
+.cabecalho_links ul{
+	justify-content: right;
+	padding: 1%;
+}
+
+.cabecalho_links a{
+	padding: 1%;
+	font-size: 200%;
+	text-decoration: none;	
 	color: #801214;
-	font-size: 300%;
 }
-.cabeca ul{
-	margin-top: 25px;
-	margin-right: 25px;
-	float: right;
-	text-align: right;
-}
-.cabeca li{
-	font-size: 22px;
+
+.cabecalho_links li{
+	font-size: 10px;
 	width: 100px;	
 	display:inline;
 	border-radius: 4px;
 }
-.cabeca a{
-	float: left;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
-	text-decoration: none;	
+
+.cabecalho_logo_nome{
+	margin: 1%;
+	width: 25%;
+	height: auto;
 }
-.cabeca a.active {
-  background-color: #4CAF50;
-  color: white;
+
+.cabecalho_logo_nome img{
+	width: 150%;
+	height: auto;
+	padding-top: 30%;
+	padding-left: 80%;
 }
-.cabeca .icon {
-  display: none;
-}  
+/*Fim do cabeçalho*/
+
 #esconderlista{
 	display: none;
 	width: 60px;
