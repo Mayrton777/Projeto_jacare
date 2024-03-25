@@ -1,40 +1,73 @@
-@charset "UTF-8";
-
+/*Corpo da página*/
 body{
 	max-width: 930px;
 	margin: 0 auto;
 	background-color: #94bfa5 ;
-	background-image: image('img_all/img_index/Ambiente.png');
 }
 
-
-.cabeca img{
-	width: 110px;
-	float: left;
-	text-align:right;
+/*Inicío do cabeçalho*/
+.cabecalho {
+	border-radius:8px;
+	background-color:white;
 	max-width: 100%;
+	height:auto;
+	padding: 1.5%;
+	margin: 1.5%;
+	display: flex;
+}
+
+.cabecalho_logo{
+	padding: 1%;
+	width: 15%;
 	height: auto;
 }
-.cabeca ul{
-	margin-top: 25px;
-	margin-right: 25px;
-	float: right;
-	text-align: right;}
 
-.cabeca a{
-	float: left;
-	padding: 14px 16px;
-	font-size: 17px;
+.cabecalho_logo_img{
+	width: 110%;
+	height: auto;
+}
+
+.cabecalho_links{
+	display: inline;
+	text-align: center;
+	justify-content: center;
+	padding: 1%;
+	width: 70%;
+	height: 10%;
+}
+
+.cabecalho_links ul{
+	justify-content: right;
+	padding: 1%;
+}
+
+.cabecalho_links a{
+	padding: 1%;
+	font-size: 200%;
 	text-decoration: none;	
 	color: #801214;
 }
 
-li{
+.cabecalho_links li{
 	font-size: 10px;
 	width: 100px;	
 	display:inline;
 	border-radius: 4px;
 }
+
+.cabecalho_logo_nome{
+	margin: 1%;
+	width: 25%;
+	height: auto;
+}
+
+.cabecalho_logo_nome img{
+	width: 150%;
+	height: auto;
+	padding-top: 30%;
+	padding-left: 80%;
+}
+/*Fim do cabeçalho*/
 
 
 
@@ -51,14 +84,7 @@ main{
 	padding-bottom: 15px;
 }
 
-.principal1{
-	text-align: center;
-	margin-top: 5px;
-	padding-top: 5px;
-	max-width: 98%;
-	height:auto;
-	
-}
+
 
 .principal2 img{
 	padding: 5px;
