@@ -5,6 +5,10 @@
     --dark: #0F172B;
 }
 
+.text-primary m-0 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
