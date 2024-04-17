@@ -117,3 +117,9 @@
     
 })(jQuery);
 
+//
+
+function redirecionarParaReserva() {
+        // Redirecionar para a página reserva.html
+        window.location.href = "reserva.html";
+}
