@@ -1,11 +1,12 @@
 const conn = require("./connection");
 
 const insert = async (user) => {
+    Number(user.qtd_pessoas)
     try {
         const result = await conn.execute(
             `INSERT INTO reserva
-            (nome, email, data_hora_reserva, num_pessoa) VALUES (?, ?, ?, ?)`,
-            [user.nome, user.email, user.data_hora_reserva, user.num_pessoa]
+            (nome, email, dt_reserva, qtd_pessoas, Obs) VALUES (?, ?, ?, ?, ?)`,
+            [user.nome, user.email, user.dt_reserva, user.qtd_pessoas, user.Obs]
         );
         return result;
     } catch (error) {
