@@ -481,3 +481,9 @@
     padding-right: 0;
     border-right: none;
 }
+
+/*Logo do projeto*/
+.logo{
+    width: 200%; /* largura desejada */
+    height: 300%; /* altura desejada */
+}

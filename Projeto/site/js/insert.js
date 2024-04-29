@@ -1,12 +1,34 @@
 // Função para enviar o formulário
 async function enviarFormulario() {
     const formulario = document.getElementById("reserva");
-    const formData = new FormData(formulario);
-    const jsonData = {};
 
-    formData.forEach((valuer, key) => {
-        jsonData[key] = valuer;
-    });
+    const nome = document.getElementById("nome").value;
+
+    const email = document.getElementById("email").value;
+
+    const dt_reserva = document.getElementById("dt_reserva").value;
+
+    const qtd_pessoas = document.getElementById("qtd_pessoas").value;
+
+    const Obs = document.getElementById("Obs").value;
+
+
+    const obj = {
+        nome,
+        email,
+        dt_reserva,
+        qtd_pessoas,
+        Obs
+    }
+
+    console.log(obj);
+
+    // const formData = new FormData(formulario);
+    // const jsonData = {};
+
+    // formData.forEach((valuer, key) => {
+    //     jsonData[key] = valuer;
+    // });
 
     const apiUrl = 'http://localhost:8080/user';
 
