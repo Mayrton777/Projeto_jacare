@@ -38,6 +38,8 @@
     z-index: 99999;
 }
 
+
+
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
@@ -52,6 +54,7 @@
     text-transform: uppercase;
     transition: .5s;
 }
+
 
 .btn.btn-primary,
 .btn.btn-secondary {
@@ -83,6 +86,21 @@
     font-weight: normal;
     border-radius: 2px;
 }
+
+.oscillate-text {
+    animation: oscillate 1s infinite;
+}
+
+button:hover {
+    background-color: #0a4e6d;
+}
+
+@keyframes oscillate {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-2deg); }
+}
+
 
 
 /*** Navbar ***/
