@@ -21,7 +21,7 @@ async function enviarFormulario() {
         Obs
     }
 
-    console.log(obj);
+    //console.log(obj);
 
     // const formData = new FormData(formulario);
     // const jsonData = {};

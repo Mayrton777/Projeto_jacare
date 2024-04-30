@@ -487,3 +487,13 @@
     width: 200%; /* largura desejada */
     height: 300%; /* altura desejada */
 }
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#teste {
+    display: flex;
+    justify-content: space-around;
+}
