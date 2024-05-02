@@ -1,3 +1,12 @@
 .divcorpo {
     text-align: center;
 }
+
+.input {
+    inline-size:300px
+}
+
+.input5 {
+    inline-size:400px
+    height: 150px
+}
