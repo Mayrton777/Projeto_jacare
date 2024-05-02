@@ -2,11 +2,13 @@
     text-align: center;
 }
 
-.input1 {
+.nomeemail {
     inline-size:350px
 }
 
-
+.numero {
+    inline-size:60px   
+}
 
 .observacoes {
     width:350px;
@@ -15,5 +17,27 @@
     padding:10px;
     text-align: justify;   
 }
+
+.button {
+    width:150px;
+    height:50px;
+    border:3px solid black;
+    padding:10px;
+    text-align: center; 
+}
+
+.container {
+    border: 2px solid #000; /* Define uma borda de 2px sólida preta */
+    background-color: #e7f37a; /* Define uma cor de fundo cinza claro */
+    padding: 20px; /* Adiciona um espaçamento interno de 20px */
+  }
+
+.alterumcampo {
+    inline-size:375px
+}
+
+.informe {
+    color: rgb(1, 1, 75);
+} 
 
 
