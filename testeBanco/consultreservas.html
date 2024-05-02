@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsultarReservas</title>
+    <link rel="stylesheet" type="text/css" href="./formstyle.css">
+</head>
+<body>
+    <div class="divcorpo">
+    <h1>PÁGINA PARA ALTERAÇÃO, CONSULTA E EXCLUSÃO DE RESERVA</h1>
+    <FOrm id="reservas">
+        <h2>Para realizar alteração ou exclusão deverá ser informado o número da Reserva e campo para alteração. Pesquise pelo email do Solicitante os dados da Reserva:</h2>
+        <br>
+        <label for="consultaemai">Digite o email do Solicitante:</label>
+        <input class="input1" type="text" id="consultaemai" email="email"><br>
+        <br>
+        <br>
+        <h2>Com base no Resultado da Pesquisa, escolha o que deseja Fazer:</h2>
+        <h3>Alterarar um Dado Cadastrado na Reserva</h3>
+        <h4>Informe abaixo o número da reserva que deseja alterar um dado cadastrado:</h4>
+        <label for="numeroreserv">Digitar o número da Reserva:</label>
+        <input class="input1" type="number" id="numeroreserv" numero="numeroreserv"><br>
+        <br>
+        <h3>Digite o nome do campo que deseja alterar:</h3>
+        <label for="nomedocampo">Nome do Campo para Alteração:</label>
+        <input class="input" type="text" id="nomedocampo" campo="nomedocampo"><br>
+        <label for="alteracao">Digite a Alteração Desejada:</label>
+        <input class="input" type="text" id="alteracao" texto="alteracao"><br>
+        <br>
+        <h3>Alterarar Todos os Dados Cadastrados na Reserva</h3>
+        <h4>Informe abaixo o número da reserva que deseja alterar todos os dados Cadastrados:</h4>
+        <label for="numeroreserv">Digite o número da Reserva:</label>
+        <input class="input1" type="number" id="numeroreserv" numero="numeroreserv"><br>
+        <br>
+        <h3>Altere os campos abaixo conforme Desejar:</h3>
+        <label for="nomeCliente">Nome:</label>
+        <input class="input1" type="text" id="nomeCliente" nome="nomeCliente"><br>
+        <br>
+        <label for="emailCliente">Email:</label>
+        <input class="input1" type="text" id="emailCliente" email="Email"><br>
+        <br>
+        <label for="dataReserva">Dia Hora Reserva:</label>
+        <input class="input" type="datetime-local" id="dataReserva" date="dataReserva"><br>
+        <br>
+        <label for="numeroPessoas">Número de Pessoas:</label>
+        <input class="input" type="number" id="numeroPessoas" quantidade="numeroPessoas"><br>
+        <br>
+        <label for="message">Observação:</label>
+        <textarea class="observacoes" id="observacoes"></textarea>
+        <br>
+        
+    </FOrm>
+    </div>
+</body>
+</html>

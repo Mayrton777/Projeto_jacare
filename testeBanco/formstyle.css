@@ -2,11 +2,18 @@
     text-align: center;
 }
 
-.input {
-    inline-size:300px
+.input1 {
+    inline-size:350px
 }
 
-.input5 {
-    inline-size:400px
-    height: 150px
+
+
+.observacoes {
+    width:350px;
+    height:100px;
+    border:3px solid black;
+    padding:10px;
+    text-align: justify;   
 }
+
+
