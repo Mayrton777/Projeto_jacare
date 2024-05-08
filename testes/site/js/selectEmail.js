@@ -1,7 +1,7 @@
 const tabelaUsuarios = document.getElementById('tabelaUsuarios');
-function buscarDados() {
-    const email = document.getElementById("email");
-    fetch('http://localhost:8080/user', {
+function buscarDadosEmail() {
+    const email = document.getElementById("email").value;
+    fetch(`http://localhost:8080/user/${email}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -22,9 +22,15 @@ function buscarDados() {
     });
 }
 
+function formatarDataHora(dt_reserva) {
+    const dataHora = new Date(dt_reserva);
+    const hora = dataHora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    const data = dataHora.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    return `${hora} ${data}`;
+}
+
 function exibirUsuarios(usuarios) {
     const tbody = tabelaUsuarios.querySelector('tbody');
-    console.log(usuarios, "sdfsdf")
     // Limpa o conteúdo atual da tabela
     tbody.innerHTML = '';
 
@@ -34,15 +40,10 @@ function exibirUsuarios(usuarios) {
         tr.innerHTML = 
             `<td>${usuario.nome}</td>
             <td>${usuario.email}</td>
-            <td>${usuario.dt_reserva}</td>
-            <td>${usuario.qtd_pessoas}</td>`;
-
-            
+            <td>${formatarDataHora(usuario.dt_reserva)}</td>
+            <td>${usuario.qtd_pessoas}</td>
+            <td>${usuario.obs}</td>`;
         tbody.appendChild(tr);
     });
 }
 
-document.getElementById('enviar').addEventListener('click', function(event){
-    buscarDados();
-    event.preventDefault();
-});

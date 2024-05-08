@@ -27,6 +27,19 @@ const select = async () => {
     }
 }
 
+const selectEmail = async (email) => {
+    console.log(email)
+    try {
+        const result = await conn.execute(
+            `SELECT * FROM reserva WHERE email = ?`,[email]
+        )
+        return result;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 const deleteUser = async (id) => {
     try {
         const result = await conn.execute(
@@ -68,5 +81,5 @@ const updateUserPhone = async (user) => {
 
 
 module.exports = {
-    insert, select, deleteUser, updateUser, updateUserPhone
+    insert, select, deleteUser, updateUser, updateUserPhone, selectEmail
 };

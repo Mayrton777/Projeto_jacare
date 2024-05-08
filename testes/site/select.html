@@ -11,14 +11,17 @@
 
     <br>
     <div class="botoes">
+        <nav>
+            <input type="button" value="Solicitar Nova Reserva" onclick="window.location.href='index.html'">
+        </nav>
+
+        <br>
+        <br>
+
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email"><br>
-        <nav>
-            <input type="button" value="Solicitar Reserva" onclick="window.location.href='index.html'">
-        </nav>
-        <br>
-        <br>
-        <input type="button" value="Enviar" id="enviar">
+        
+        <input type="button" value="Enviar" id="enviar" onclick="buscarDadosEmail()">
     </div>
 
     <br>
@@ -28,11 +31,11 @@
     <table id="tabelaUsuarios">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Dia Hora Reserva</th>
                 <th>Número de pessoas</th>
+                <th>Observações</th>
             </tr>
         </thead>
         <tbody>
@@ -40,6 +43,7 @@
         </tbody>
     </table>
 
-    <script src="js/select.js"></script>
+    
+    <script src="js/selectEmail.js"></script>
 </body>
 </html>

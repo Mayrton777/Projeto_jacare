@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
     try {
         const result = await userDB.insert(user);
         res.status(201).json({
-            message: "Cadastro realizado com sucesso!"
+            message: "Reserva realizada com sucesso!"
         });
     } catch(err) {
         console.log(err);
@@ -33,6 +33,22 @@ router.get("/", async (req, res) => {
             .json({message : "Ocorreu um erro ao consultar"})
     }
 })
+
+router.get("/:email", async (req, res) => {
+    const email = req.params.email
+    try {
+        const result = await userDB.selectEmail(email);
+        res.status(200).json({
+            result
+        });
+    } catch (erro) {
+        console.log(erro);
+        res
+            .status(500)
+            .json({message : "Ocorreu um erro ao consultar"})
+    }
+})
+
 
 router.delete("/", async (req, res) => {
     const user = req.query;
