@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Envio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Formulário de Envio</h1>
+    <form id="meuFormulario">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="dt_reserva">Data:</label><br>
+        <input type="datetime-local" id="dt_reserva" data-target="#date3" data-toggle="datetimepicker"><br>
+        <br>
+
+        <label for="qtd_pessoas">Número de pessoas:</label><br>
+        <input type="text" id="qtd_pessoas" name="qtd_pessoas"><br>
+
+        <label for="obs">Observação:</label><br>
+        <input type="text" id="obs" name="obs"><br>
+        
+        <input type="button" value="Enviar" id="enviar" onclick="enviarDados()"><br>
+        <br>
+        <nav>
+            <input type="button" value="Consultar Reserva" onclick="window.location.href='select.html'">
+        </nav>
+    </form>
+    <div>
+        
+    </div>
+    <script src="js/insert.js"></script>
+</body>
+</html>
