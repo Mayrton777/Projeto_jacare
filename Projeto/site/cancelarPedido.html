@@ -57,13 +57,14 @@
   <div class="container">
     <h1>Cancelar Pedido</h1>
     <form action="caminho_para_o_script_de_cancelamento.php" method="post">
+      
+      <label for="email_cliente">Digitar o seu E-mail :</label>
+      <input type="email" id="email_cliente" name="email_cliente" placeholder=" Seu E-mail ">
+
       <label for="numero_pedido">Número do Pedido:</label>
-      <input type="text" id="numero_pedido" name="numero_pedido" placeholder="Número do Pedido">
+      <input type="text" id="numero_pedido" name="numero_pedido" placeholder="Digite seu Pedido">
 
-      <label for="email_cliente">E-mail do Cliente:</label>
-      <input type="email" id="email_cliente" name="email_cliente" placeholder="E-mail do Cliente">
-
-      <input type="submit" value="Cancelar Pedido">
+      <input type="submit" value="Consultar Reserva">
     </form>
   </div>
 </body>

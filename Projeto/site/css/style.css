@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #fcfbf9;
     --light: #F1F8FF;
     --dark: #0F172B;
 }
@@ -58,7 +58,7 @@
 
 .btn.btn-primary,
 .btn.btn-secondary {
-    color: #FFFFFF;
+    color: #f9fdfa;
 }
 
 .btn-square {
@@ -92,13 +92,13 @@
 }
 
 button:hover {
-    background-color: #0a4e6d;
+    background-color: #ebf1f3;
 }
 
 @keyframes oscillate {
-    0% { transform: rotate(-2deg); }
-    50% { transform: rotate(5deg); }
-    100% { transform: rotate(-2deg); }
+    50% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+    100% { transform: rotate(-5deg); }
 }
 
 
