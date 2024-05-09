@@ -34,10 +34,11 @@ router.get("/", async (req, res) => {
     }
 })
 
-router.get("/:email", async (req, res) => {
-    const email = req.params.email
+router.get("/:telefone/:id", async (req, res) => {
+    const telefone = req.params.telefone
+    const id = req.params.id
     try {
-        const result = await userDB.selectEmail(email);
+        const result = await userDB.selectTelefone(telefone, id);
         res.status(200).json({
             result
         });

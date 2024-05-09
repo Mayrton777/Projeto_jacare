@@ -5,7 +5,7 @@ function enviarDados() {
 
     const nome = document.getElementById("nome").value;
 
-    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
 
     const dt_reserva = document.getElementById("dt_reserva").value;
 
@@ -15,7 +15,7 @@ function enviarDados() {
 
     const obj = {
         nome,
-        email,
+        telefone,
         dt_reserva,
         qtd_pessoas,
         obs

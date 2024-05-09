@@ -5,8 +5,8 @@ const insert = async (user) => {
     try {
         const result = await conn.execute(
             `INSERT INTO reserva
-            (nome, email, dt_reserva, qtd_pessoas, obs) VALUES (?, ?, ?, ?, ?)`,
-            [user.nome, user.email, user.dt_reserva, user.qtd_pessoas, user.obs]
+            (nome, telefone, dt_reserva, qtd_pessoas, obs) VALUES (?, ?, ?, ?, ?)`,
+            [user.nome, user.telefone, user.dt_reserva, user.qtd_pessoas, user.obs]
         );
         return result;
     } catch (error) {
@@ -27,15 +27,15 @@ const select = async () => {
     }
 }
 
-const selectEmail = async (email) => {
-    console.log(email)
+const selectTelefone = async (telefone, id) => {
     try {
         const result = await conn.execute(
-            `SELECT * FROM reserva WHERE email = ?`,[email]
+            `SELECT * FROM reserva WHERE telefone = ? and id = ?`,[telefone, id]
         )
         return result;
     } catch (error) {
         console.log(error);
+        
         throw error;
     }
 }
@@ -81,5 +81,5 @@ const updateUserPhone = async (user) => {
 
 
 module.exports = {
-    insert, select, deleteUser, updateUser, updateUserPhone, selectEmail
+    insert, select, deleteUser, updateUser, updateUserPhone, selectTelefone
 };
