@@ -40,6 +40,21 @@ const selectTelefone = async (telefone, id) => {
     }
 }
 
+
+const selectId = async (id) => {
+    try {
+        const result = await conn.execute(
+            `SELECT * FROM reserva WHERE id = ?`,[id]
+        )
+        return result;
+    } catch (error) {
+        console.log(error);
+        
+        throw error;
+    }
+}
+
+
 const deleteUser = async (id) => {
     try {
         const result = await conn.execute(
@@ -81,5 +96,5 @@ const updateUserPhone = async (user) => {
 
 
 module.exports = {
-    insert, select, deleteUser, updateUser, updateUserPhone, selectTelefone
+    selectId,insert, select, deleteUser, updateUser, updateUserPhone, selectTelefone
 };

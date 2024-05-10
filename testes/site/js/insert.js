@@ -31,7 +31,7 @@ function enviarDados() {
     fetch('http://localhost:8080/user', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(obj)
     })
@@ -42,14 +42,32 @@ function enviarDados() {
         return response.json();
     })
     .then(data => {
-        // Aqui você pode lidar com a resposta do backend, se necessário
-        console.log('Resposta do servidor:', data);
-        alert(data.message)
+        console.log('Resposta do servidor (1ª requisição):', data.message[0][0]);
+        return fetch('http://localhost:3002/sendMessage', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data.message[0][0])
+        });
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao enviar dados na segunda requisição');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Aqui você pode lidar com a resposta do backend da segunda requisição, se necessário
+        console.log('Resposta do servidor (2ª requisição):', data);
+        alert(data.message);
     })
     .catch(error => {
         console.error('Erro:', error);
     });
 }
+
+
 
 document.getElementById('enviar').addEventListener('click', function(event){
     enviarDados();

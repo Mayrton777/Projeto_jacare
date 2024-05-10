@@ -8,9 +8,11 @@ router.post("/", async (req, res) => {
     const user = req.body;
     console.log(user)
     try {
-        const result = await userDB.insert(user);
+        const [result] = await userDB.insert(user);
+        const insertedUserId = result.insertId;
+        const insertedUser = await userDB.selectId(insertedUserId);
         res.status(201).json({
-            message: "Reserva realizada com sucesso!"
+            message: insertedUser
         });
     } catch(err) {
         console.log(err);

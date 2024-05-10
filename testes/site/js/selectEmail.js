@@ -26,6 +26,14 @@ function buscarDadosEmail() {
         return response.json();
     })
     .then(data => {
+        fetch(`http://localhost:3002/`, {
+            method: '',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+        })
+    })
+    .then(data => {
 
         console.log(data.result[0].length)
 
