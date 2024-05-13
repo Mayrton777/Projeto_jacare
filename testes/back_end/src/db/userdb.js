@@ -58,7 +58,7 @@ const selectId = async (id) => {
 const deleteUser = async (id) => {
     try {
         const result = await conn.execute(
-            `DELETE FROM usuario WHERE id_user = ?`,
+            `DELETE FROM reserva WHERE id = ?`,
             [id]
         );
         return result;
@@ -71,8 +71,8 @@ const deleteUser = async (id) => {
 const updateUser = async (user) => {
     try {
         const result = await conn.execute(
-            `UPDATE usuario SET first_name = ?, last_name = ?, email = ?, phone = ? WHERE id_user = ?`,
-            [user.first_name, user.last_name, user.email, user.phone, user.id_user]
+            `UPDATE reserva SET nome = ?, telefone = ?, dt_reserva = ?, qtd_pessoas = ? obs = ? WHERE id_user = ?`,
+            [user.nome, user.telefone, user.dt_reserva, user.qtd_pessoas, user.obs, user.id]
         );
         return result;
     } catch (error) {
