@@ -18,7 +18,7 @@ const insert = async (user) => {
 const select = async () => {
     try {
         const result = await conn.execute(
-            "SELECT * FROM usuario",
+            "SELECT * FROM reserva",
         );
         return result;
     } catch (error) {
