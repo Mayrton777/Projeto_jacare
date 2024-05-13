@@ -249,6 +249,13 @@ button:hover {
 
 
 /*** Food Menu ***/
+
+.outline{
+	color:  #801214;
+	text-align: center;
+	padding-top: 30px;
+}
+
 .nav-pills .nav-item .active {
     border-bottom: 2px solid var(--primary);
 }
