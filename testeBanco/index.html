@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Reservas</title>
+    <script src="js/select.js"></script>
+</head>
+<body>
+    <h1>Reservas</h1>
+    <label for="consultaemail">Digite o email do Solicitante:</label>
+    <input class="nomeemail" type="text" id="consultaemail"><br>
+    <button class="button" type="submit" id="enviar" onclick="enviarFormulario()">Realizar Pesquisa</button>
+    <table id="reservasTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Quantidade de pessoas</th>
+                <th>Data</th>
+                <!-- Adicione mais colunas conforme necessário -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados serão inseridos aqui através do JavaScript -->
+        </tbody>
+    </table>
+</body>
+</html>
+
