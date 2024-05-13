@@ -1,8 +1,4 @@
 function enviarDados() {
-    const formulario = document.getElementById("meuFormulario");
-    const formData = new FormData(formulario);
-    const jsonData = {};
-
     const nome = document.getElementById("nome").value;
 
     const telefone = document.getElementById("telefone").value;
@@ -22,11 +18,6 @@ function enviarDados() {
     }
 
     console.log(obj)
-
-    formData.forEach((value, key) => {
-        jsonData[key] = value;
-    });
-
 
     fetch('http://localhost:8080/user', {
         method: 'POST',
