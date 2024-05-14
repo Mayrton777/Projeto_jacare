@@ -10,7 +10,9 @@ router.post("/", async (req, res) => {
     try {
         const [result] = await userDB.insert(user);
         const insertedUserId = result.insertId;
-        const insertedUser = await userDB.select(insertedUserId);
+        console.log(insertedUserId)
+        const insertedUser = await userDB.selectId(insertedUserId);
+        console.log(insertedUser)
         res.status(201).json({
             message: insertedUser
         });
