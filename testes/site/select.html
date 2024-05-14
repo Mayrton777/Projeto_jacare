@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Envio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Formulário de Consulta</h1>
+
+    <br>
+    <div class="botoes">
+        <nav>
+            <input type="button" value="Solicitar Nova Reserva" onclick="window.location.href='index.html'">
+        </nav>
+
+        <br>
+        <br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="text" id="telefone" name="telefone"><br>
+
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+        
+        <input type="button" value="Enviar" id="enviar" onclick="buscarDadosEmail()">
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <table id="tabelaUsuarios">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Dia Hora Reserva</th>
+                <th>Número de pessoas</th>
+                <th>Observações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aqui serão inseridos os dados dos usuários -->
+        </tbody>
+    </table>
+
+    
+    <script src="js/selectEmail.js"></script>
+</body>
+</html>

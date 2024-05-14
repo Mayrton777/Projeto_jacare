@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
-    --light: #F1F8FF;
+    --primary: #fea116;
+    --light: #fbfff1;
     --dark: #0F172B;
 }
 
@@ -38,6 +38,8 @@
     z-index: 99999;
 }
 
+
+
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
@@ -53,9 +55,10 @@
     transition: .5s;
 }
 
+
 .btn.btn-primary,
 .btn.btn-secondary {
-    color: #FFFFFF;
+    color: #f9fdfa;
 }
 
 .btn-square {
@@ -84,6 +87,21 @@
     border-radius: 2px;
 }
 
+.oscillate-text {
+    animation: oscillate 1s infinite;
+}
+
+button:hover {
+    background-color: #ebf1f3;
+}
+
+@keyframes oscillate {
+    50% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
@@ -108,12 +126,12 @@
 }
 
 .navbar-dark .navbar-brand img {
-    max-height: 60px;
-    transition: .5s;
+    max-height: 250px;
+    transition: .7s;
 }
 
 .sticky-top.navbar-dark .navbar-brand img {
-    max-height: 45px;
+    max-height: 118px;
 }
 
 @media (max-width: 991.98px) {
@@ -133,7 +151,7 @@
     }
 
     .navbar-dark .navbar-brand img {
-        max-height: 45px;
+        max-height: 177px;
     }
 }
 
@@ -231,6 +249,13 @@
 
 
 /*** Food Menu ***/
+
+.outline{
+	color:  #fea116;
+	text-align: center;
+	padding-top: 30px;
+}
+
 .nav-pills .nav-item .active {
     border-bottom: 2px solid var(--primary);
 }
@@ -484,6 +509,16 @@
 
 /*Logo do projeto*/
 .logo{
-    width: 200%; /* largura desejada */
+    width: 110%; /* largura desejada */
     height: 300%; /* altura desejada */
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#teste {
+    display: flex;
+    justify-content: space-around;
 }
