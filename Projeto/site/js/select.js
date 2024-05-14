@@ -10,7 +10,6 @@ function buscarDadosEmail() {
          alert('Passe o ID e o telefone')
          return
     }
-    //console.log(telefone, id)
     fetch(`http://localhost:8080/user/${telefone}/${id}`, {
         method: 'GET',
         headers: {
@@ -22,14 +21,6 @@ function buscarDadosEmail() {
             throw new Error('Erro ao enviar dados');
         }
         return response.json();
-    })
-    .then(data => {
-        fetch(`http://localhost:3002/`, {
-            method: '',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-        })
     })
     .then(data => {
 
@@ -54,6 +45,11 @@ function formatarDataHora(dt_reserva) {
     return `${data} ${hora}`;
 }
 
+function atualizarDados() {
+    $('#myModal').modal('show');
+}
+
+
 function exibirUsuarios(usuarios) {
     const tbody = tabelaUsuarios.querySelector('tbody');
     // Limpa o conteúdo atual da tabela
@@ -67,7 +63,9 @@ function exibirUsuarios(usuarios) {
             <td>${usuario.telefone}</td>
             <td>${formatarDataHora(usuario.dt_reserva)}</td>
             <td>${usuario.qtd_pessoas}</td>
-            <td>${usuario.obs}</td>`;
+            <td>${usuario.obs}</td>
+            <td><button class="botaoTabela" id="atualizar" onclick="atualizarDados()">Atualizar</button></td>
+            <td><button class="botaoTabela" id="excluir">Cancelar</button></td>`;
         tbody.appendChild(tr);
     });
 }
