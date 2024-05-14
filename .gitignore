@@ -1,3 +1,6 @@
 ./node_modules
 ./LICENSE.txt
 .env
+node_modules
+.wwebjs_cache
+.wwebjs_auth
