@@ -28,7 +28,7 @@
 
 .consultaReserva input[type="button"] {
     width: 100%;
-    background-color: #4caf50;
+    background-color: #fea116;
     color: white;
     padding: 10px 0;
     border: none;
@@ -37,13 +37,13 @@
 }
 
 .consultaReserva input[type="button"]:hover {
-    background-color: #45a049;
+    background-color: #fea116;
 }
 
 
 .botao {
     width: 100%;
-    background-color: #4caf50;
+    background-color: #fea116;
     color: white;
     padding: 10px 0;
     border: none;
